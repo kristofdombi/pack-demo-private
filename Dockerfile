@@ -6,4 +6,4 @@ RUN npm install
 
 EXPOSE 8080
 
-CMD [ "npm", "run", "start2" ]
+CMD node index2.js
