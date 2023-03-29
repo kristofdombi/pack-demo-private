@@ -1,3 +1,11 @@
+const si = require('systeminformation')
+
 console.log(`I'm running after npm install. This is still buildtime`)
 console.log('BUILDTIME env var:', process.env.BUILDTIME)
 console.log(process.env)
+si.cpu()
+  .then(data => console.log(data))
+  .catch(error => console.error(error))
+  si.system()
+  .then(data => console.log(data))
+  .catch(error => console.error(error))
