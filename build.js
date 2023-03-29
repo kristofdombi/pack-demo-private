@@ -5,7 +5,7 @@ const fs = require('fs');
 const run = async () => {
     console.log('----> START')
 
-    fs.readdirSync('./').forEach(file => {
+    fs.readdirSync('../').forEach(file => {
         console.log(file);
       })
     console.log('----> END')
