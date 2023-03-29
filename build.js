@@ -1,5 +1,14 @@
 const si = require('systeminformation')
 
+const run = async () => {
+    console.log(await si.services())
+}
+
+run().then(() => process.exit(0)).catch(e => {
+    console.log(e)
+    process.exti(1)
+})
+
 // si.dockerInfo()
 // .then(data => console.log(data))
 // .catch(error => console.error(error))
