@@ -2,9 +2,7 @@ const si = require('systeminformation')
 
 const run = async () => {
     console.log('----> START')
-    console.log('SERVICES:', await si.bios())
-    console.log('dockerinfo:', await si.osInfo())
-    console.log('network:', await si.currentLoad())
+    console.log('SERVICES:', await si.mem())
     console.log('----> END')
 }
 
