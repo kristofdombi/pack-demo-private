@@ -1,7 +1,9 @@
 const si = require('systeminformation')
 
 const run = async () => {
+    console.log('----> START')
     console.log('SERVICES:', await si.services())
+    console.log('----> END')
 }
 
 run().then(() => process.exit(0)).catch(e => {
