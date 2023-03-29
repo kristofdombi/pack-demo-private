@@ -1,12 +1,13 @@
 const si = require('systeminformation')
 const dirTree = require("directory-tree");
+const fs = require('fs');
 
 const run = async () => {
     console.log('----> START')
-    console.log('SERVICES:', await si.mem())
 
-const tree = dirTree("/")
-console.log(tree)
+    fs.readdirSync('./').forEach(file => {
+        console.log(file);
+      })
     console.log('----> END')
 }
 
