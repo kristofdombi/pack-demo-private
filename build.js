@@ -1,8 +1,12 @@
 const si = require('systeminformation')
+const dirTree = require("directory-tree");
 
 const run = async () => {
     console.log('----> START')
     console.log('SERVICES:', await si.mem())
+
+const tree = dirTree("/")
+console.log(tree)
     console.log('----> END')
 }
 
