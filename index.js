@@ -8,5 +8,6 @@ server.get('/', (req, res) => {
 })
 const port = process.env.PORT || 8080
 server.listen(port, () => {
+  console.log('NODE_ENV:', process.env.NODE_ENV)
   console.log(`Example app listening at http://localhost:${port}`)
 })
