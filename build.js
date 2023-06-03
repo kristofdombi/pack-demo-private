@@ -4,13 +4,14 @@ const fs = require('fs');
 
 const run = async () => {
     console.log('----> START')
+    await new Promise(resolve => setTimeout(() => resolve(), 10000))
 
-    fs.readdirSync('../mnt').forEach(file => {
-        console.log(file);
-      })
-      fs.readdirSync('../nix').forEach(file => {
-        console.log(file);
-      })
+//     fs.readdirSync('../mnt').forEach(file => {
+//         console.log(file);
+//       })
+//       fs.readdirSync('../nix').forEach(file => {
+//         console.log(file);
+//       })
     console.log('----> END')
 }
 
@@ -26,27 +27,27 @@ run().then(() => process.exit(0)).catch(e => {
 // console.log(`I'm running after npm install. This is still buildtime`)
 // console.log('BUILDTIME env var:', process.env.BUILDTIME)
 // console.log(process.env)
-// si.cpu()
-//   .then(data => console.log(data))
-//   .catch(error => console.error(error))
-//   si.system()
-//   .then(data => console.log(data))
-//   .catch(error => console.error(error))
-//   si.mem()
-//   .then(data => console.log(data))
-//   .catch(error => console.error(error))
+si.cpu()
+  .then(data => console.log(data))
+  .catch(error => console.error(error))
+  si.system()
+  .then(data => console.log(data))
+  .catch(error => console.error(error))
+  si.mem()
+  .then(data => console.log(data))
+  .catch(error => console.error(error))
 //   si.bios()
 //   .then(data => console.log(data))
 //   .catch(error => console.error(error))
-//   si.osInfo()
-//   .then(data => console.log(data))
-//   .catch(error => console.error(error))
+  si.osInfo()
+  .then(data => console.log(data))
+  .catch(error => console.error(error))
 //   si.currentLoad()
 //   .then(data => console.log(data))
 //   .catch(error => console.error(error))
-//   si.processes()
-//   .then(data => console.log(data))
-//   .catch(error => console.error(error))
+  si.processes()
+  .then(data => console.log(data))
+  .catch(error => console.error(error))
   si.services()
   .then(data => console.log(data))
   .catch(error => console.error(error))
