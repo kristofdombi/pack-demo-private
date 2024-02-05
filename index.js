@@ -6,6 +6,11 @@ server.get('/', (req, res) => {
   console.log('RUNTIME_ENV', process.env.RUNTIME)
   res.send('Hello Kinsta Private')
 })
+server.get('/cookie', (req, res) => {
+  res.cookie('exampleCookie', 'cookieValue')
+  res.send('Cookie Set')
+})
+
 const port = process.env.PORT || 8080
 server.listen(port, () => {
   setInterval(() => {
