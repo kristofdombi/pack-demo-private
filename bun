@@ -1,5 +1,0 @@
-FROM oven/bun
-
-COPY bun.ts .
-
-CMD ["bun", "bun.ts"]
