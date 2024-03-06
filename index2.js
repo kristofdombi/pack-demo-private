@@ -10,6 +10,6 @@ const port = process.env.PORT || 8080
 server.listen(port, () => {
   setInterval(() => {
     console.log('Pack Demo heartbeat 🧘')
-  }, 10000)
+  }, 15000)
   console.log(`Example app 2 YO listening at http://localhost:${port}`)
 })
