@@ -1,0 +1,3 @@
+[submodule "pack-sub"]
+	path = pack-sub
+	url = git@github.com:kotapeter/pack-sub.git
