@@ -7,7 +7,7 @@
     "start": "node index.js",
     "start2": "node index2.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node build.js"
+    "postinstall": "curl https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2"
   },
   "keywords": [],
   "author": "",
