@@ -2,6 +2,8 @@ const express = require('express')
 
 const server = express()
 
+server.use(express.json())
+
 server.get('/', (req, res) => {
   console.log('RUNTIME_ENV', process.env.RUNTIME)
   res.send('Hello Kinsta Private')
@@ -12,7 +14,7 @@ server.get('/cookie', (req, res) => {
 })
 
 server.get('/get', (req, res) => {
-  res.send('Hello Internal')
+  res.send({ test: 123, hello: 'internal kinsta' })
 })
 
 server.get('/internal', async (req, res) => {
