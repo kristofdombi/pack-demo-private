@@ -7,6 +7,8 @@ const run = async () => {
 
 run().then(() => {
   console.log('Cron job completed')
+  process.exit(0)
 }).catch(() => {
   console.error('Error running cron job')
+  process.exit(1)
 })
