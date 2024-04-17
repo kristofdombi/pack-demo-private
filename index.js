@@ -16,13 +16,14 @@ server.get('/get', (req, res) => {
 })
 
 server.get('/internal', async (req, res) => {
-    console.log('INTERNAL', process.env.REMOTE_SERVER)
+  console.log('INTERNAL', process.env.REMOTE_SERVER)
   try {
     const response = await fetch(process.env.REMOTE_SERVER)
     const data = await response.json()
     res.send(data)
   } catch (error) {
-    res.status(500).send('Error fetching data')
+    console.log(error)
+    res.status(500).send(`Error fetching data: ${JSON.stringify(error)}`)
   }
 })
 
