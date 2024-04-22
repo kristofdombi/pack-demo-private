@@ -17,6 +17,10 @@ server.get('/get', (req, res) => {
   res.send({ test: 123, hello: 'internal kinsta' })
 })
 
+server.get('/health', (req, res) => {
+  res.send({ success: true })
+})
+
 server.get('/internal', async (req, res) => {
   console.log('INTERNAL', process.env.REMOTE_SERVER)
   try {
