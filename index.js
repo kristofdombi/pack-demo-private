@@ -14,7 +14,7 @@ server.get('/cookie', (req, res) => {
 })
 
 server.get('/get', (req, res) => {
-  res.send({ test: 123, hello: 'internal kinsta' })
+  res.send({ test: 123, hello: 'internal kinsta1' })
 })
 
 server.get('/health', (req, res) => {
