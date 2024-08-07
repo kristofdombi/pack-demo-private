@@ -6,7 +6,7 @@ server.use(express.json())
 
 server.get('/', (req, res) => {
   console.log('RUNTIME_ENV', process.env.RUNTIME)
-  res.send('Hello Kinsta Private 112')
+  res.send('Hello Kinsta Private 1121')
 })
 server.get('/cookie', (req, res) => {
   res.cookie('exampleCookie', 'cookieValue')
