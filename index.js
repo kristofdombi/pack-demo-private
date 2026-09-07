@@ -21,6 +21,18 @@ server.get('/health', (req, res) => {
   res.send({ success: true })
 })
 
+server.get('/egress-ip', async (req, res) => {
+  try {
+    const response = await fetch('https://api.ipify.org?format=json')
+    if (!response.ok) throw new Error(`Upstream responded with ${response.status}`)
+    const { ip } = await response.json()
+    res.send({ egressIp: ip })
+  } catch (error) {
+    console.log('EGRESS_IP', error)
+    res.status(502).send({ error: 'Could not determine egress IP', details: error.message })
+  }
+})
+
 server.get('/internal', async (req, res) => {
   console.log('INTERNAL', process.env.REMOTE_SERVER)
   try {
